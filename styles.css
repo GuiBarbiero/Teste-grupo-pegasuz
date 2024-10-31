@@ -1,0 +1,596 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: white;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: white;
+    margin-top: 70px; 
+}
+
+/* Definição de cores */
+:root {
+    --verde-principal: #1A9047;
+    --verde-secundario: #2BC866;
+    --azul-principal: #004AAD;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: white;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Texto ao lado da logo */
+.logo-text {
+    font-size: 18px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* Menu de navegação */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Links de navegação */
+.menu a {
+    text-decoration: none;
+    color: var(--azul-principal);
+    margin: 0 20px;
+    font-size: 18px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--verde-secundario); /* Muda a cor ao passar o mouse */
+}
+
+/* Botões de "Entrar" e "Cadastrar" */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Estilo dos botões */
+.btn {
+    border: 2px solid var(--verde-principal);
+    padding: 7px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover nos botões */
+.btn:hover {
+    transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+}
+
+/* Botão "Entrar" */
+.btn-entrar {
+    background-color: white;
+    color: var(--verde-principal);
+}
+
+.btn-entrar:hover {
+    background-color: var(--verde-principal); /* Muda a cor de fundo ao passar o mouse */
+    color: white; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Botão "Cadastrar" */
+.btn-cadastrar {
+    background-color: var(--verde-principal);
+    color: white;
+}
+
+.btn-cadastrar:hover {
+    background-color: white; /* Muda a cor de fundo ao passar o mouse */
+    color: var(--verde-principal); /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Seção de Rastreamento */
+.rastreamento {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Título da seção de rastreamento */
+.rastreamento h1 {
+    font-size: 36px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--verde-secundario);
+}
+
+/* Grupo de input e botão */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.input-group input {
+    width: 350px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Helvetica', sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group .btn-rastrear {
+    background-color: gray;
+    color: rgb(94, 67, 67);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover no botão de rastrear */
+.input-group .btn-rastrear:hover {
+    background-color: var(--verde-secundario); /* Muda a cor de fundo */
+    transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+}
+
+/* Ícone de localização no botão */
+.input-group .btn-rastrear img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Imagem da cidade */
+.city-image {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    background-color: white;
+}
+
+/* Seção Funcionalidades */
+.funcionalidades {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.funcionalidades h2 {
+    font-size: 60px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--verde-secundario);
+}
+
+.funcionalidades p.descricao {
+    font-size: 18px;
+    color: #666;
+    font-family: 'Helvetica', sans-serif;
+    margin-bottom: 50px;
+}
+
+.funcionalidades .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.cards .card {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.cards .card:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: var(--verde-secundario);
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Seção final com o CTA */
+.cta-final {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.cta-final p {
+    font-size: 30px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--verde-secundario);
+    margin-bottom: 30px;
+}
+
+.cta-final .btn-cadastrar-se {
+    background-color: var(--verde-secundario);
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-final .btn-cadastrar-se:hover {
+    background-color: var(--verde-principal);
+    transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+}
+
+/* Seção com fundo verde */
+.green-section {
+    background-color: var(--verde-secundario);
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.green-section .content {
+    flex: 1;
+    max-width: 50%;
+    background-color: var(--verde-secundario);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.green-section h2 {
+    font-size: 50px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: var(--verde-secundario);
+}
+
+.green-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--verde-secundario);
+}
+
+.green-section .partners {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+
+.green-section .partners img {
+    height: 30px;
+}
+
+/* Imagem ao lado do texto */
+.green-section .image-container {
+    background-color: var(--verde-secundario);
+    padding: 30px;
+}
+
+.green-section .image-container img {
+    max-width: 100%;
+    height: 500px;
+}
+
+/* Primeira seção: Título e imagem */
+.help-header-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    text-align: left;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.help-header-section .header-content {
+    flex: 1;
+}
+
+.help-header-section h2 {
+    font-size: 36px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--verde-secundario);
+}
+
+.help-header-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.help-header-section .header-image-container {
+    flex: 1;
+    text-align: right;
+}
+
+.help-header-section .header-image-container img {
+    max-width: 75%;
+    height: auto;
+}
+
+/* Segunda seção: Cards de ajuda com setas ao lado */
+.assistance-section {
+    padding: 20px 20px;
+    background-color: white;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.assistance-section .assist-cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+.assist-card {
+    flex: 1;
+    background-color: white;
+    border: 2px solid var(--verde-secundario);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    max-width: 220px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.assist-card:hover {
+    transform: translateY(-5px);
+}
+
+.assist-card h3 {
+    color: var(--verde-secundario);
+    font-size: 20px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.assist-card p {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.5;
+}
+
+.assist-card ul {
+    padding-left: 20px;
+}
+
+.assist-card ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+}
+
+/* Setas simples sem position absolute */
+.carousel-arrow {
+    font-size: 50px;
+    color: var(--verde-secundario);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    color: var(--verde-principal);
+}
+
+/* Animação de subida suave */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Aplica a animação na imagem */
+.city-image, 
+.image-container img,
+.header-image-container img {
+    animation: slideUp 1.5s ease-out;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    /* Ajustando o menu */
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Botões de "Entrar" e "Cadastrar" */
+    .actions {
+        justify-content: center;
+    }
+
+    /* Cards de funcionalidades */
+    .funcionalidades .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Ajustando o conteúdo da seção "Parceiros" */
+    .green-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .green-section .content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .green-section .partners {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .green-section .partners img {
+        height: 40px;
+    }
+
+    .green-section .image-container {
+        max-width: 100%;
+    }
+
+    .green-section .image-container img {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Ajustes para as seções de ajuda */
+    .assistance-section {
+        flex-direction: column;
+    }
+
+    .assist-cards-container {
+        flex-direction: column;
+    }
+
+    .assist-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .city-image {
+        max-width: 100%;
+    }
+
+    .funcionalidades h2 {
+        font-size: 40px;
+    }
+
+    .funcionalidades p.descricao {
+        font-size: 16px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .cta-final p {
+        font-size: 24px;
+    }
+
+    .green-section h2 {
+        font-size: 30px;
+    }
+
+    .green-section p {
+        font-size: 16px;
+    }
+}
